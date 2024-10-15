@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #fffdd0;
+    color: #311e14;
+    font-family: "Barlow", sans-serif;
+    margin: 0;
+}
+
+header {
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    z-index: 1;
+    background-color: #658c50;
+    line-height: 75px;
+    text-align: center;
+    font-family: "Kanit", sans-serif;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #fffdd0;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+}
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main div {
+    margin: 5px 10px;
+    font-size: 2rem;
+}
+
+main a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #658c50;
+}
+
+main h3 {
+    font-size: 3rem;
+    font-family: "Kanit", sans-serif;
+}
+
+main h5 {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Kanit", sans-serif;
+}
+
+main div p {
+    font-size: 2rem;
+}

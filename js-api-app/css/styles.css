@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+body {
+    background-color: #fffdd0;
+    color: #311e14;
+    font-family: "Barlow", sans-serif;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+body p {
+    font-size: 2rem;
+}
+/* Mobile CSS */
+@media screen and (min-width: 320px) and (max-width: 430px) {
+    #web {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    header {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 1;
+    }
+
+    header .top-nav {
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Kanit", sans-serif;
+        font-weight: 900;
+        color: #fffdd0;
+        background-color: #658c50;
+        height: 75px;
+        line-height: 75px;
+    }
+
+    header h1 a {
+        text-decoration: none;
+        color: #fffdd0;
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif;
+    }
+
+    header i {
+        color: #311e14;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    nav.hide,
+    #platform-list.hide {
+        display: none;
+    }
+
+    nav.show,
+    #platform-list.show,
+    nav div.show {
+        display: block;
+    }
+
+    nav.show {
+        border-top: 1px solid #fffdd0;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        background-color: #311e14;
+        padding: 10px 0;
+    }
+
+    nav.show #search-bar {
+        background-color: #311e14;
+        font-size: 1rem;
+        text-align: center;
+        color: #fffdd0;
+        border: none;
+        padding: 10px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    nav.show section {
+        font-size: 1rem;
+        text-align: center;
+        color: #fffdd0;
+        border: none;
+        padding: 5px 0;
+    }
+
+    nav.show .platform,
+    nav.show div {
+        display: flex;
+        padding: 0 20px;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-family: "Kanit", sans-serif;
+    }
+
+    nav.show ul li {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    nav.show #platform-list.show,
+    nav.show div.show,
+    nav.show div a.show {
+        display: block;
+        color: #fffdd0;
+    }
+
+    nav.show i {
+        color: #658c50;
+        font-size: 2rem;
+    }
+
+    nav.show a {
+        width: 100%;
+        color: #fffdd0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+
+    main article {
+        padding: 15px 5px;
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+    }
+
+    main article img {
+        width: 90%;
+    }
+}
+/* Mobile to Tab CSS */
+@media screen and (min-width: 431px) and (max-width: 820px) {
+    #web {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        background-color: #658c50;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 75px;
+    }
+
+    header .top-nav {
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Kanit", sans-serif;
+        font-weight: 900;
+        color: #fffdd0;
+        height: 75px;
+        line-height: 75px;
+    }
+
+    header h1 a {
+        text-decoration: none;
+        color: #fffdd0;
+        font-size: 2rem;
+        font-family: "Poppins", sans-serif;
+    }
+
+    header i {
+        color: #311e14;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    nav.hide,
+    #platform-list.hide {
+        display: none;
+    }
+
+    nav.show,
+    #platform-list.show,
+    nav div.show {
+        display: block;
+    }
+
+    nav.show {
+        border-top: 1px solid #fffdd0;
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+        background-color: #311e14;
+        padding: 10px 0;
+    }
+
+    nav.show #search-bar {
+        background-color: #311e14;
+        font-size: 1rem;
+        text-align: center;
+        color: #fffdd0;
+        border: none;
+        padding: 10px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    nav.show section {
+        font-size: 1rem;
+        text-align: center;
+        color: #fffdd0;
+        border: none;
+        padding: 5px 0;
+    }
+
+    nav.show.platform,
+    nav.show div {
+        display: flex;
+        padding: 0 20px;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        font-family: "Kanit", sans-serif;
+    }
+
+    nav.show ul li {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    nav.show #platform-list.show,
+    nav.show div.show,
+    nav.show div a.show {
+        display: block;
+        color: #fffdd0;
+    }
+
+    nav.show i {
+        color: #658c50;
+        font-size: 2rem;
+    }
+
+    nav.show a {
+        width: 100%;
+        color: #fffdd0;
+        text-decoration: none;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10px;
+    }
+
+    main article {
+        padding: 15px 10px;
+        margin: 10px;
+        width: 46%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main article img {
+        width: 100%;
+    }
+
+    main #main-content {
+        width: 100vw;
+    }
+}
+/* Big Tablet Screens to Small Laptops CSS */
+@media screen and (min-width: 821px) {
+    #mobile {
+        display: none;
+    }
+
+    #web {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        background-color: #658c50;
+        height: 10vh;
+        position: fixed;
+        z-index: 1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-nav {
+        width: 100vw;
+        text-align: center;
+        font-family: "Kanit", sans-serif;
+    }
+
+    .top-nav a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: #fffdd0;
+    }
+
+    .top-nav h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fffdd0;
+    }
+
+    nav {
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        color: #311e14;
+        font-family: "Kanit", sans-serif;
+    }
+
+    nav section a {
+        color: #311e14;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+
+    nav section a:hover,
+    .windows-pc:hover,
+    .web-browser:hover,
+    nav a:hover {
+        color: #fffdd0;
+    }
+
+    #search-bar {
+        color: #fffdd0;
+        border: none;
+        background-color: #658c50;
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #search-bar:focus {
+        border-bottom: 1px solid #311e14;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    main article {
+        padding: 15px 10px;
+        margin: 10px;
+        width: 30.8%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main article img {
+        width: 100%;
+    }
+
+    main #main-content {
+        width: 100vw;
+    }
+}
+/* Laptop screens */
+@media screen and (min-width: 1024px) {
+    #web header {
+        height: fit-content;
+        position: fixed;
+    }
+
+    #web .top-nav {
+        height: 30%;
+        position: relative;
+    }
+
+    #web .top-nav a {
+        font-size: 2rem;
+    }
+
+    #web nav a {
+        font-size: 1.2rem;
+    }
+
+    .windows-pc,
+    .web-browser {
+        font-size: 1.2rem;
+    }
+
+    #search-bar {
+        font-size: 1rem;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    main article {
+        font-size: 1rem;
+        padding: 15px 10px;
+        margin: 10px;
+        width: 48%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main article img {
+        width: 100%;
+        margin: auto 0;
+    }
+
+    main #main-content {
+        width: 100%;
+    }
+}
+/* Laptop/PC screens */
+@media screen and (min-width: 1440px) {
+    #web header {
+        height: fit-content;
+        position: fixed;
+    }
+
+    #web .top-nav {
+        height: 30%;
+        position: relative;
+    }
+
+    #web .top-nav a {
+        font-size: 3rem;
+    }
+
+    #web nav a {
+        font-size: 2rem;
+    }
+
+    .windows-pc,
+    .web-browser {
+        font-size: 2rem;
+    }
+
+    #search-bar {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    main article {
+        padding: 15px 10px;
+        margin: 10px;
+        width: 31.8%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main article img {
+        width: 100%;
+    }
+
+    main #main-content {
+        width: 100vw;
+    }
+}
+/* Big PC screen sizes */
+@media screen and (min-width: 2560px) {
+    #web header {
+        height: fit-content;
+        position: fixed;
+    }
+
+    #web .top-nav {
+        height: 30%;
+        position: relative;
+    }
+
+    #web .top-nav a {
+        font-size: 3rem;
+    }
+
+    #web nav a {
+        font-size: 2rem;
+    }
+
+    .windows-pc,
+    .web-browser {
+        font-size: 2rem;
+    }
+
+    #search-bar {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 100%;
+        position: absolute;
+        top: 120px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    main article {
+        padding: 15px 10px;
+        margin: 10px;
+        width: 24.2%;
+        margin-bottom: 10px;
+        color: #fffdd0;
+        background-color: #658c50;
+        justify-content: center;
+        text-align: center;
+        display: inline-block;
+    }
+
+    main article img {
+        width: 100%;
+    }
+
+    main #main-content {
+        width: 100vw;
+    }
+}
